@@ -1,0 +1,349 @@
+/* Genel Stil ve Font */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* Adım Bölümleri */
+.config-section {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.config-section.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+.info-text {
+    background-color: #e6f7ff;
+    border-left: 5px solid #007bff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Kutu Seçim Grubu (Grid) */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Seçim Kartları */
+.option-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
+
+.option-card img {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option-card span {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.option-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seçili Kart */
+.option-card.selected {
+    border-color: #28a745;
+    background-color: #e9f7ed;
+    box-shadow: 0 0 0 3px #28a745;
+}
+
+/* Devre Dışı Kartlar */
+.option-card.disabled-card {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background-color: #f8f8f8;
+    position: relative;
+    pointer-events: none;
+}
+
+.option-card.disabled-card::after {
+    content: "Mevcut Değil";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 1px solid #dc3545;
+}
+
+.price-text {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 5px;
+}
+
+.hidden-radio {
+    display: none;
+}
+
+/* Duvar Konfigürasyonu */
+.wall-group {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.wall-group h3 {
+    margin-top: 0;
+    color: #495057;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* İskelet None Seçeneği */
+.clear-selection-box {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.clear-selection-label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9em;
+}
+
+#frame_none:checked + .clear-selection-label {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Özet Bölümü */
+.summary-section {
+    margin-top: 50px;
+    border-top: 3px solid #007bff;
+    padding-top: 20px;
+}
+
+#summary-details {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Ana Ürün Kartı */
+.summary-main-info {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+}
+
+.main-product-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-product-image {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.main-product-details h3 {
+    margin: 0 0 10px 0;
+    color: #007bff;
+    font-size: 1.4em;
+}
+
+.main-product-details p {
+    margin: 5px 0;
+    color: #495057;
+    font-size: 0.95em;
+}
+
+/* Görsel ile Özet Öğeleri */
+.summary-item-with-image {
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.summary-item-with-image.main {
+    border-left-color: #007bff;
+    background-color: #e7f3ff;
+}
+
+.summary-item-with-image.wall {
+    border-left-color: #ffc107;
+    background-color: #fff8e1;
+}
+
+.summary-item-content {
+    display: flex;
+    align-items: center;
+}
+
+.summary-item-image {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item-no-image {
+    width: 60px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    margin-right: 15px;
+    color: #6c757d;
+}
+
+.summary-item-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-item-name {
+    font-weight: 500;
+    color: #495057;
+}
+
+.summary-item-price {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.1em;
+}
+
+/* Kategori Başlıkları */
+.category-title h4 {
+    margin: 20px 0 10px 0;
+    color: #495057;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Eski Stil Korunması */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted #eee;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item strong {
+    color: #007bff;
+}
+
+#total-price-box {
+    text-align: right;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #28a745;
+}
+
+#total-price {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.category-title {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Responsive Düzenleme */
+@media (max-width: 600px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 15px;
+    }
+}

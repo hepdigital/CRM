@@ -1,0 +1,4 @@
+id,product_categories,name,stock_code,description,price,stock_quantity,vat_rate,image_url
+,Gazebo Ana Ürün,2x2 Gazebo 690 Denye Çatı Saçak,GAZ-2X2-690,2x2 boyutunda 690 denye kumaş gazebo,1800.00,100,10.00,https://example.com/image1.jpg
+,Gazebo İskelet,2x2 30luk Çelik İskelet,ISK-2X2-30C,2x2 gazebo için 30luk çelik iskelet,2300.00,50,20.00,https://example.com/image2.jpg
+,Gazebo Duvar,2m Tam Duvar 690 Denye,DUV-2M-TAM-690,2 metre tam duvar 690 denye kumaş,950.00,200,10.00,https://example.com/image3.jpg

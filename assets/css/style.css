@@ -1,0 +1,112 @@
+/* assets/css/style.css */
+
+/* Genel Stiller */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Tablo Stiller */
+.table-responsive {
+    min-height: 300px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* Form Stiller */
+.required:after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}
+
+/* Kart Stiller */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+/* Preview Panel */
+.preview-panel {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+}
+
+/* Ürün Grid */
+.product-grid .card {
+    transition: transform 0.2s;
+}
+
+.product-grid .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Badge Stiller */
+.badge {
+    padding: 0.5em 0.8em;
+}
+
+/* Alert Stiller */
+.alert {
+    margin-bottom: 1rem;
+}
+
+/* Print Stiller */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-only {
+        display: block !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+    }
+}
+
+/* Loader */
+.loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
